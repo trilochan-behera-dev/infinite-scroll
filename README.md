@@ -1,7 +1,5 @@
 # Find Your Jobs
 
-![Find Your Jobs](https://find-your-jobs.vercel.app/)
-
 ## Overview
 
 Find Your Jobs is a sleek web application built with React.js for the frontend, utilizing HTTP requests for API communication. With Material-UI for design and a variety of hooks for enhanced functionality, this project aims to redefine the job search experience. Explore job listings effortlessly with infinite scroll, advanced filters, and lightning-fast performance.
@@ -26,8 +24,7 @@ Find Your Jobs is a sleek web application built with React.js for the frontend, 
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository_url>
-
+   git clone https://github.com/trilochan-behera-dev/infinite-scroll.git
 
 2. **Install Dependencies:**:
 
