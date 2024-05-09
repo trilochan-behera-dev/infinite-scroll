@@ -13,6 +13,14 @@ import JobCard from "./components/JobCard";
 
 // Custom styles for the component
 const useStyles = makeStyles((theme) => ({
+  heading: {
+    marginTop: theme.spacing(10),
+    fontStyle: "italic",
+    fontWeight:900,
+    color: "#00a57e",
+    fontSize:'30px',
+    textDecoration:'underline'
+  },
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
@@ -169,6 +177,9 @@ function App() {
 
   return (
     <div className="App">
+      <Typography variant="h6" align="center" className={classes.heading}>
+        Find Your Jobs
+      </Typography>
       <Container maxWidth="lg" className={classes.container}>
         {/* Filter component to apply filter criteria */}
         <Filter setFilters={setFilters} />
