@@ -6,10 +6,10 @@ import {
   CircularProgress,
   Typography,
 } from "@material-ui/core";
-import "./App.css";
 import Filter from "./components/Filter";
 import useDebounce from "./hooks/useDebounce";
 import useThrottle from "./hooks/useThrottle";
+import JobCard from "./components/JobCard";
 
 // Custom styles for the component
 const useStyles = makeStyles((theme) => ({
@@ -173,7 +173,7 @@ function App() {
         {/* Filter component to apply filter criteria */}
         <Filter setFilters={setFilters} />
         {/* Display message if no jobs found */}
-        {filteredJobs.length === 0 && !loading && (
+        {!filteredJobs.length && !loading && (
           <Typography
             variant="h6"
             align="center"
@@ -184,6 +184,16 @@ function App() {
             Please try different filters.
           </Typography>
         )}
+
+        {/* Job List */}
+        <Grid container spacing={3}>
+          {filteredJobs.map((job, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              {/* Job card component */}
+              <JobCard job={job} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </div>
   );
