@@ -10,6 +10,7 @@ import Filter from "./components/Filter";
 import useDebounce from "./hooks/useDebounce";
 import useThrottle from "./hooks/useThrottle";
 import JobCard from "./components/JobCard";
+import InfiniteScroll from "./components/InfiniteScroll";
 
 // Custom styles for the component
 const useStyles = makeStyles((theme) => ({
@@ -211,6 +212,7 @@ function App() {
           <CircularProgress />
         </div>
       )}
+      <InfiniteScroll onScroll={loadMoreJobs} />
     </div>
   );
 }
