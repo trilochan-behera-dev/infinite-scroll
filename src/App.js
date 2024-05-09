@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     marginTop: theme.spacing(10),
     fontStyle: "italic",
-    fontWeight:900,
+    fontWeight: 900,
     color: "#00a57e",
-    fontSize:'30px',
-    textDecoration:'underline'
+    fontSize: "30px",
+    textDecoration: "underline",
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -206,6 +206,11 @@ function App() {
           ))}
         </Grid>
       </Container>
+      {loading && (
+        <div className={classes.progress}>
+          <CircularProgress />
+        </div>
+      )}
     </div>
   );
 }
