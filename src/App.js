@@ -172,8 +172,19 @@ function App() {
       <Container maxWidth="lg" className={classes.container}>
         {/* Filter component to apply filter criteria */}
         <Filter setFilters={setFilters} />
+        {/* Display message if no jobs found */}
+        {filteredJobs.length === 0 && !loading && (
+          <Typography
+            variant="h6"
+            align="center"
+            className={classes.noJobsMessage}
+          >
+            No jobs found matching the selected criteria.
+            <br />
+            Please try different filters.
+          </Typography>
+        )}
       </Container>
-      
     </div>
   );
 }
